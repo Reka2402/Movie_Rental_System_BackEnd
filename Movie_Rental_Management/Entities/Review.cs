@@ -2,9 +2,9 @@
 {
     public class Review
     {
-        public int Id { get; set; }
-        public int CustomerId { get; set; }
-        public int MovieId { get; set; }
+        public Guid Id { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid MovieId { get; set; }
         public DateTime ReviewedDate { get; set; }
         public string Comments{ get; set; }
         public string Rating { get; set; }

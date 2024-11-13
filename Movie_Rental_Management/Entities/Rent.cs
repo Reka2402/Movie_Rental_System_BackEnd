@@ -2,9 +2,9 @@
 {
     public class Rent
     {
-        public int Id { get; set; }    
-        public int CustomerId { get; set; }
-        public int MovieId { get; set; }
+        public Guid Id { get; set; }    
+        public Guid CustomerId { get; set; }
+        public Guid MovieId { get; set; }
         public DateOnly RequestedDate { get; set; }
         public DateOnly ApporovedDate { get; set; }
         public  DateOnly Rentaldate { get; set; }

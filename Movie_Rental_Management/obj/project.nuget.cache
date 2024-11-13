@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MBCRqNdTem4=",
+  "dgSpecHash": "zo+um+o8uqY=",
   "success": true,
-  "projectFilePath": "X:\\BackEnd\\Movie_Rental_Management\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+  "projectFilePath": "X:\\BackEnd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\UT01336\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\UT01336\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\UT01336\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\UT01336\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\UT01336\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\UT01336\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

@@ -2,9 +2,9 @@
 {
     public class Movie
     {
-        public int Id { get; set; }
-        public int GenreId { get; set; }
-        public int DirectorId { get; set; }
+        public Guid Id { get; set; }
+        public Guid GenreId { get; set; }
+        public Guid DirectorId { get; set; }
         public string MovieName { get; set; }
         public string Director { get; set; }
         public string ReleaseDate { get; set; }

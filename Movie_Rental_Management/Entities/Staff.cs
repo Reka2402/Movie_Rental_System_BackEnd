@@ -1,8 +1,11 @@
-﻿namespace Movie_Rental_Management.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Movie_Rental_Management.Entities
 {
     public class Staff
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+        [Required]
         public string Email { get; set; }
         public int NIC { get; set; }
         public string Name { get; set; }

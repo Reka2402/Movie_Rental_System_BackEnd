@@ -2,8 +2,8 @@
 {
     public class Inventory
     {
-        public int Id { get; set; }
-        public int MovieId { get; set; }
+        public Guid Id { get; set; }
+        public Guid MovieId { get; set; }
         public int Totalcopies { get; set; }
         public int Availablecopies { get; set; }
         public DateOnly LastRestocked { get; set; }

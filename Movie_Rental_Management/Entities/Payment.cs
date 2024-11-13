@@ -2,9 +2,9 @@
 {
     public class Payment
     {
-        public int Id { get; set; }
-        public int Amonut { get; set; }
-        public int ReferenceId { get; set; }
+        public Guid Id { get; set; }
+        public Guid Amonut { get; set; }
+        public Guid ReferenceId { get; set; }
         public Rent Rent { get; set; }
         public enum Type
         {
