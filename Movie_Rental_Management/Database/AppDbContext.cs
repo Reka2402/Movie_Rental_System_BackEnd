@@ -22,26 +22,26 @@ namespace Movie_Rental_Management.Database
         public DbSet<Role> Roles { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Payment> Payment { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }  
+        public DbSet<UserRole> UserRoles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserRole>()
-            .HasKey(ur => ur.Id);
-
-            modelBuilder.Entity<UserRole>()
-           .HasOne(ur => ur.Role)
-           .WithMany(r => r.UserRoles)
-           .HasForeignKey(ur => ur.RoleId);
-
-            modelBuilder.Entity<UserRole>()
-                .HasOne(ur => ur.User)
-                .WithMany(u => u.Roles)
-                .HasForeignKey(ur => ur.UserId);
-
-
             base.OnModelCreating(modelBuilder);
 
+            // User -> UserRoles
+            modelBuilder.Entity<User>()
+                .HasMany<UserRole>(u => u.UserRoles)
+                .WithOne()
+                .HasForeignKey(ur => ur.UserId)
+                .OnDelete(DeleteBehavior.Cascade); 
+
+            // Role -> UserRoles
+            modelBuilder.Entity<Role>()
+                .HasMany<UserRole>(r => r.UserRoles)
+                .WithOne()
+                .HasForeignKey(ur => ur.RoleId)
+                .OnDelete(DeleteBehavior.Restrict); 
+            base.OnModelCreating(modelBuilder);
         }
 
 

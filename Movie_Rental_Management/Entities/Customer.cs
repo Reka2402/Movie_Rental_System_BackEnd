@@ -8,12 +8,11 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int MobileNumber { get; set; }
-        public DateOnly JoinDate { get; set; }
+        public DateTime JoinDate { get; set; }
         public ICollection<Rent> Rents { get; set; }
         public ICollection<Payment> Payments { get; set; }
         public ICollection<Review> Reviews { get; set; }
-
- 
+        public bool IsActive { get; set; }
 
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Movie_Rental_Management.Database;
 
@@ -11,9 +12,11 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241117084140_taskssss")]
+    partial class taskssss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,7 +60,6 @@ namespace Movie_Rental_Management.Migrations
             modelBuilder.Entity("Movie_Rental_Management.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
@@ -420,6 +422,15 @@ namespace Movie_Rental_Management.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Movie_Rental_Management.Entities.Customer", b =>
+                {
+                    b.HasOne("Movie_Rental_Management.Entities.User", null)
+                        .WithOne()
+                        .HasForeignKey("Movie_Rental_Management.Entities.Customer", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Movie_Rental_Management.Entities.Inventory", b =>
                 {
                     b.HasOne("Movie_Rental_Management.Entities.Movie", "Movie")
@@ -519,7 +530,7 @@ namespace Movie_Rental_Management.Migrations
                     b.HasOne("Movie_Rental_Management.Entities.Role", null)
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Movie_Rental_Management.Entities.Role", "Role")
