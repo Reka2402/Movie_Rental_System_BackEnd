@@ -22,6 +22,7 @@ namespace Movie_Rental_Management.Database
         public DbSet<Role> Roles { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Payment> Payment { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }  
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

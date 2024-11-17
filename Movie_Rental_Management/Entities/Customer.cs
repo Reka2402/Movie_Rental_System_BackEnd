@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public string Email { get; set; }
-        public int NIC { get; set; }
+        public string NIC { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int MobileNumber { get; set; }
