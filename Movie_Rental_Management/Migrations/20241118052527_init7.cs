@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Movie_Rental_Management.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class init7 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,11 +17,12 @@ namespace Movie_Rental_Management.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NIC = table.Column<int>(type: "int", nullable: false),
+                    NIC = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MobileNumber = table.Column<int>(type: "int", nullable: false),
-                    JoinDate = table.Column<DateOnly>(type: "date", nullable: false)
+                    JoinDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -99,7 +100,7 @@ namespace Movie_Rental_Management.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     GenreId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DirectorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    directorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     MovieName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Director = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ReleaseDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -111,8 +112,8 @@ namespace Movie_Rental_Management.Migrations
                 {
                     table.PrimaryKey("PK_Movies", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Movies_Directors_DirectorId",
-                        column: x => x.DirectorId,
+                        name: "FK_Movies_Directors_directorId",
+                        column: x => x.directorId,
                         principalTable: "Directors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -170,7 +171,7 @@ namespace Movie_Rental_Management.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserRole",
+                name: "UserRoles",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -179,15 +180,15 @@ namespace Movie_Rental_Management.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserRole", x => x.Id);
+                    table.PrimaryKey("PK_UserRoles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserRole_Roles_RoleId",
+                        name: "FK_UserRoles_Roles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UserRole_Users_UserId",
+                        name: "FK_UserRoles_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -245,7 +246,7 @@ namespace Movie_Rental_Management.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Review",
+                name: "Reviews",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -257,15 +258,15 @@ namespace Movie_Rental_Management.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Review", x => x.Id);
+                    table.PrimaryKey("PK_Reviews", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Review_Customers_CustomerId",
+                        name: "FK_Reviews_Customers_CustomerId",
                         column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Review_Movies_MovieId",
+                        name: "FK_Reviews_Movies_MovieId",
                         column: x => x.MovieId,
                         principalTable: "Movies",
                         principalColumn: "Id",
@@ -309,9 +310,9 @@ namespace Movie_Rental_Management.Migrations
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Movies_DirectorId",
+                name: "IX_Movies_directorId",
                 table: "Movies",
-                column: "DirectorId");
+                column: "directorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Movies_GenreId",
@@ -344,23 +345,23 @@ namespace Movie_Rental_Management.Migrations
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Review_CustomerId",
-                table: "Review",
+                name: "IX_Reviews_CustomerId",
+                table: "Reviews",
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Review_MovieId",
-                table: "Review",
+                name: "IX_Reviews_MovieId",
+                table: "Reviews",
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserRole_RoleId",
-                table: "UserRole",
+                name: "IX_UserRoles_RoleId",
+                table: "UserRoles",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserRole_UserId",
-                table: "UserRole",
+                name: "IX_UserRoles_UserId",
+                table: "UserRoles",
                 column: "UserId");
         }
 
@@ -380,13 +381,13 @@ namespace Movie_Rental_Management.Migrations
                 name: "Payment");
 
             migrationBuilder.DropTable(
-                name: "Review");
+                name: "Reviews");
 
             migrationBuilder.DropTable(
                 name: "Staffs");
 
             migrationBuilder.DropTable(
-                name: "UserRole");
+                name: "UserRoles");
 
             migrationBuilder.DropTable(
                 name: "Rents");

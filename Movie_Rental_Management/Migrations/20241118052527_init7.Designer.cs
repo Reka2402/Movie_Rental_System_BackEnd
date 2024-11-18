@@ -12,8 +12,8 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241117081743_tablesssss")]
-    partial class tablesssss
+    [Migration("20241118052527_init7")]
+    partial class init7
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -166,9 +166,6 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("DirectorId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("GenreId")
                         .HasColumnType("uniqueidentifier");
 
@@ -187,11 +184,14 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("directorId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("DirectorId");
-
                     b.HasIndex("GenreId");
+
+                    b.HasIndex("directorId");
 
                     b.ToTable("Movies");
                 });
@@ -319,7 +319,7 @@ namespace Movie_Rental_Management.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("Review");
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Role", b =>
@@ -426,15 +426,15 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Movie", b =>
                 {
-                    b.HasOne("Movie_Rental_Management.Entities.Director", "director")
-                        .WithMany("Movies")
-                        .HasForeignKey("DirectorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Movie_Rental_Management.Entities.Genre", "Genre")
                         .WithMany("Movies")
                         .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movie_Rental_Management.Entities.Director", "director")
+                        .WithMany("Movies")
+                        .HasForeignKey("directorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -516,7 +516,7 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired();
 
                     b.HasOne("Movie_Rental_Management.Entities.User", "User")
-                        .WithMany("Roles")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -558,8 +558,6 @@ namespace Movie_Rental_Management.Migrations
             modelBuilder.Entity("Movie_Rental_Management.Entities.User", b =>
                 {
                     b.Navigation("Notifications");
-
-                    b.Navigation("Roles");
                 });
 #pragma warning restore 612, 618
         }

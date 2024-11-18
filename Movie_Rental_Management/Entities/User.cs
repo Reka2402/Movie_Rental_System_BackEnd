@@ -11,8 +11,9 @@ namespace Movie_Rental_Management.Entities
         public string PasswordHash { get; set; }
         public bool IsConfirmed { get; set; }
         public ICollection<Notification> Notifications { get; set; }
-        public ICollection<UserRole> Roles { get; set; }
-        public ICollection<UserRole>UserRoles { get; set; }
+
+        
+        
 
     }
 }

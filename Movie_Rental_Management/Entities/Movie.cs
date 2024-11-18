@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public Guid GenreId { get; set; }
-        public Guid DirectorId { get; set; }
+        public Guid directorId { get; set; }
         public string MovieName { get; set; }
         public string Director { get; set; }
         public string ReleaseDate { get; set; }

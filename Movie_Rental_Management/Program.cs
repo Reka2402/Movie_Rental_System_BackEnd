@@ -17,6 +17,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
 builder.Services.AddScoped<IUserservice, UserService>();
 builder.Services.AddScoped<IUserRepository , UserRepository>();
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

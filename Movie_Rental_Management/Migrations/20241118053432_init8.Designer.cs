@@ -12,8 +12,8 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241117084140_taskssss")]
-    partial class taskssss
+    [Migration("20241118053432_init8")]
+    partial class init8
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,6 +60,7 @@ namespace Movie_Rental_Management.Migrations
             modelBuilder.Entity("Movie_Rental_Management.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
@@ -165,9 +166,6 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("DirectorId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("GenreId")
                         .HasColumnType("uniqueidentifier");
 
@@ -186,11 +184,14 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("directorId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("DirectorId");
-
                     b.HasIndex("GenreId");
+
+                    b.HasIndex("directorId");
 
                     b.ToTable("Movies");
                 });
@@ -318,7 +319,7 @@ namespace Movie_Rental_Management.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("Review");
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Role", b =>
@@ -389,24 +390,14 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("RoleId1")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId1")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("RoleId1");
-
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("UserRoles");
                 });
@@ -422,15 +413,6 @@ namespace Movie_Rental_Management.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Movie_Rental_Management.Entities.Customer", b =>
-                {
-                    b.HasOne("Movie_Rental_Management.Entities.User", null)
-                        .WithOne()
-                        .HasForeignKey("Movie_Rental_Management.Entities.Customer", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Movie_Rental_Management.Entities.Inventory", b =>
                 {
                     b.HasOne("Movie_Rental_Management.Entities.Movie", "Movie")
@@ -444,15 +426,15 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Movie", b =>
                 {
-                    b.HasOne("Movie_Rental_Management.Entities.Director", "director")
-                        .WithMany("Movies")
-                        .HasForeignKey("DirectorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Movie_Rental_Management.Entities.Genre", "Genre")
                         .WithMany("Movies")
                         .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movie_Rental_Management.Entities.Director", "director")
+                        .WithMany("Movies")
+                        .HasForeignKey("directorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -527,27 +509,15 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.UserRole", b =>
                 {
-                    b.HasOne("Movie_Rental_Management.Entities.Role", null)
+                    b.HasOne("Movie_Rental_Management.Entities.Role", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movie_Rental_Management.Entities.Role", "Role")
-                        .WithMany()
-                        .HasForeignKey("RoleId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Movie_Rental_Management.Entities.User", null)
-                        .WithMany("UserRoles")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Movie_Rental_Management.Entities.User", "User")
-                        .WithMany("Roles")
-                        .HasForeignKey("UserId1")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -588,10 +558,6 @@ namespace Movie_Rental_Management.Migrations
             modelBuilder.Entity("Movie_Rental_Management.Entities.User", b =>
                 {
                     b.Navigation("Notifications");
-
-                    b.Navigation("Roles");
-
-                    b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618
         }
