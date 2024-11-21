@@ -1,10 +1,10 @@
 ﻿namespace Movie_Rental_Management.Entities
 {
-    public class Role
-    {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-
-        public ICollection<UserRole> UserRoles { get; set; }
-    }
+   
+        public enum Role
+        {
+            Admin = 1,
+            Student = 2,
+        }
+    
 }

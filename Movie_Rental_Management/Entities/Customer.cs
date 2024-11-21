@@ -14,5 +14,6 @@
         public ICollection<Review> Reviews { get; set; }
         public bool IsActive { get; set; }
 
+
     }
 }

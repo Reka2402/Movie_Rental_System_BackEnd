@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\18th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj": {}
+    "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj": {}
   },
   "projects": {
-    "X:\\18th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj": {
+    "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\18th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+        "projectUniqueName": "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
         "projectName": "Movie_Rental_Management",
-        "projectPath": "X:\\18th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+        "projectPath": "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
         "packagesPath": "C:\\Users\\UT01336\\.nuget\\packages\\",
-        "outputPath": "X:\\18th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\obj\\",
+        "outputPath": "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\UT01336\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
             "BCrypt.Net-Core": {
               "target": "Package",
               "version": "[1.6.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

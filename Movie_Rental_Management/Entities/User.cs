@@ -5,15 +5,12 @@ namespace Movie_Rental_Management.Entities
     public class User
     {
         public Guid Id { get; set; }
-        [Required]
-        [EmailAddress]
+        public string Name { get; set; }
         public string Email { get; set; }
         public string PasswordHash { get; set; }
-        public bool IsConfirmed { get; set; }
-        public ICollection<Notification> Notifications { get; set; }
+        public Role Role { get; set; }
+       
 
-        
-        
 
     }
 }

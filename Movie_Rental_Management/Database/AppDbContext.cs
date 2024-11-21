@@ -19,7 +19,7 @@ namespace Movie_Rental_Management.Database
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Rent>Rents { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Role> Roles { get; set; }
+       
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Payment> Payment { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
