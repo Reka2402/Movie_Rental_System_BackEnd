@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Movie_Rental_Management.IService;
 using Movie_Rental_Management.Models.RequestModel;
@@ -16,10 +17,6 @@ namespace Movie_Rental_Management.Controllers
         {
             _userService = authService;
         }
-
-
-
-
         [HttpPost]
         public async Task<IActionResult> Register(UserRequestDTO user)
         {
@@ -33,12 +30,12 @@ namespace Movie_Rental_Management.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpGet]
-        public async Task<IActionResult> Login(string email, string password)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
             try
             {
-                var result = await _userService.Login(email, password);
+                var result = await _userService.Login(loginRequest.Email, loginRequest.Password);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -46,6 +43,7 @@ namespace Movie_Rental_Management.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
         [Authorize]
         [HttpGet("check")]
         public async Task<IActionResult> CheckAPI()

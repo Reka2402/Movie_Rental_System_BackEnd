@@ -7906,7 +7906,6 @@
       "BCrypt.Net-Core >= 1.6.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.11",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
-      "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.6",
@@ -7919,11 +7918,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+      "projectUniqueName": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
       "projectName": "Movie_Rental_Management",
-      "projectPath": "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+      "projectPath": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
       "packagesPath": "C:\\Users\\UT01336\\.nuget\\packages\\",
-      "outputPath": "X:\\21st\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\obj\\",
+      "outputPath": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UT01336\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7967,12 +7966,6 @@
             "version": "[8.0.11, )"
           },
           "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[8.0.10, )"
-          },
-          "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.10, )"
           },

@@ -15,7 +15,7 @@ namespace Movie_Rental_Management.Database
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Director> Directors { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Inventory> Inventory { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Rent>Rents { get; set; }
         public DbSet<User> Users { get; set; }
