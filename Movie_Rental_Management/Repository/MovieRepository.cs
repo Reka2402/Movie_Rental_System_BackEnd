@@ -59,19 +59,19 @@ namespace Movie_Rental_Management.Repository
             {
                 director = await _context.Directors.FirstOrDefaultAsync(d => d.DirectorName == directorName);
                 if (director == null)
-                { 
-                director = new Director
                 {
-                    DirectorName = directorName,
-                    Description = directordescription
-                };
-                _context.Directors.Add(director);
-                await _context.SaveChangesAsync();
+                    director = new Director
+                    {
+                        DirectorName = directorName,
+                        Description = directordescription
+                    };
+                    _context.Directors.Add(director);
+                    await _context.SaveChangesAsync();
+                }
             }
-        }
             return director;
         }
-        public async Task<Inventory>GetInventoryByDvdIdAsync(Guid dvdId)
+        public async Task<Inventory> GetInventoryByDvdIdAsync(Guid dvdId)
         {
             return await _context.Inventories.FirstOrDefaultAsync(i => i.MovieId == dvdId);
         }
@@ -81,16 +81,30 @@ namespace Movie_Rental_Management.Repository
             await _context.SaveChangesAsync();
             return inventory;
         }
-        //public async Task<Movie> GetMovieByAsync(Guid id)
-        //{
-        //    return await _context
+        public async Task<Movie> GetMovieByIdAsync(Guid id)
+        {
+            return await _context.Movies.Include(d => d.Genre).Include(d => d.director).FirstOrDefaultAsync(d => d.Id == id);
+        }
+        public async Task<Movie> UpdateDVDAsync(Movie movie)
+        {
+            _context.Movies.Update(movie);
+            await _context.SaveChangesAsync();
+            return movie;
+        }
+        //    public async Task<string> DeleteMovieAsync(Guid id, int quantityToDelete)
+        //    {
+        //        var movie = await _context.Movies.FirstOrDefaultAsync(d => d.Id == id);
+        //        if (movie != null)
+        //        {
+        //            throw new KeyNotFoundException("DVD not found");
+        //        }
+        //        var inventory = await _context
+
         //}
 
 
-    }
-        
- 
 
+    }
 }
         //public async Task UpdateDVDAsync(Movie dvd)
         //{

@@ -1,50 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\22nd\\Movie_Rental_System_BackEnd\\",
+  "WorkspaceRootPath": "X:\\23rd\\Movie_Rental_System_BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\repository\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\repository\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\repository\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\irepository\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\irepository\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\entities\\director.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\director.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\iservice\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\iservice\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\irepository\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\irepository\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\service\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\service\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\entities\\director.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\director.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\22nd\\movie_rental_system_backend\\movie_rental_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|x:\\23rd\\movie_rental_system_backend\\movie_rental_management\\migrations\\20241123041758_taskss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E559EB28-94C7-4AFA-8992-1A245312E3CB}|Movie_Rental_Management\\Movie_Rental_Management.csproj|solutionrelative:movie_rental_management\\migrations\\20241123041758_taskss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,150 +90,256 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IMovieRepository.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAALAAAA",
+              "DocumentIndex": 6,
+              "Title": "Review.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Review.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Review.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Entities\\Review.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:33:25.822Z",
+              "WhenOpened": "2024-11-23T08:55:29.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "Role.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Role.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Role.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Entities\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T08:55:58.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Service\\UserService.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Movie_Rental_Management\\Service\\UserService.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Service\\UserService.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Service\\UserService.cs",
               "RelativeToolTip": "Movie_Rental_Management\\Service\\UserService.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAwwDIAAAAnAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwC0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T11:16:36.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\Repository\\UserRepository.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\Repository\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:11:54.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovieRepository.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\MovieRepository.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\Repository\\MovieRepository.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\MovieRepository.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\Repository\\MovieRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:37:20.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Director.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Director.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Director.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Director.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\Entities\\Director.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:54:08.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Movie.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Movie.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Movie.cs",
               "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Movie.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Movie.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Movie.cs",
               "RelativeToolTip": "Movie_Rental_Management\\Entities\\Movie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T10:46:14.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Database\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\Database\\AppDbContext.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Database\\AppDbContext.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\Database\\AppDbContext.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwA0AAAA1AAAA",
+              "DocumentIndex": 0,
+              "Title": "MovieRepository.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\MovieRepository.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Repository\\MovieRepository.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\MovieRepository.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Repository\\MovieRepository.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAowFIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:39:58.422Z",
+              "WhenOpened": "2024-11-22T10:37:20.723Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\appsettings.json",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\appsettings.json",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\appsettings.json",
-              "RelativeToolTip": "Movie_Rental_Management\\appsettings.json",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\User.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\User.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T08:55:54.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserservice.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IService\\IUserservice.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\IService\\IUserservice.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IService\\IUserservice.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\IService\\IUserservice.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-22T11:09:32.626Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:15:56.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Service\\MovieService.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Service\\MovieService.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Service\\MovieService.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Service\\MovieService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:13:22.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Controllers\\MovieController.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Controllers\\MovieController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:24:37.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Repository\\UserRepository.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:11:54.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Director.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Director.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Director.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Director.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Entities\\Director.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:54:08.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Program.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Program.cs",
               "RelativeDocumentMoniker": "Movie_Rental_Management\\Program.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Program.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Program.cs",
               "RelativeToolTip": "Movie_Rental_Management\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T11:09:30.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Genre.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Genre.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Genre.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\Entities\\Genre.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "DocumentIndex": 10,
+              "Title": "IMovieRepository.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\IRepository\\IMovieRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:45:24.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T11:33:25.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "Movie_Rental_Management\\Controllers\\MovieController.cs",
-              "ToolTip": "X:\\22nd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "Movie_Rental_Management\\Controllers\\MovieController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Database\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Database\\AppDbContext.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Database\\AppDbContext.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Database\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:24:37.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T10:39:58.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IMovieService.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IService\\IMovieService.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\IService\\IMovieService.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IService\\IMovieService.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\IService\\IMovieService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:15:55.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IRepository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\IRepository\\IUserRepository.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\IRepository\\IUserRepository.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\IRepository\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:16:44.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20241123041758_taskss.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Migrations\\20241123041758_taskss.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Migrations\\20241123041758_taskss.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Migrations\\20241123041758_taskss.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Migrations\\20241123041758_taskss.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:17:58.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Controllers\\UserController.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:16:35.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\appsettings.json",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\appsettings.json",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\appsettings.json",
+              "RelativeToolTip": "Movie_Rental_Management\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-22T11:09:32.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Genre.cs",
+              "RelativeDocumentMoniker": "Movie_Rental_Management\\Entities\\Genre.cs",
+              "ToolTip": "X:\\23rd\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Entities\\Genre.cs",
+              "RelativeToolTip": "Movie_Rental_Management\\Entities\\Genre.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:45:24.123Z"
             }
           ]
         }
