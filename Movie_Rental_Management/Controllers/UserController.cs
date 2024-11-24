@@ -44,20 +44,20 @@ namespace Movie_Rental_Management.Controllers
             }
         }
 
-        [Authorize]
-        [HttpGet("check")]
-        public async Task<IActionResult> CheckAPI()
-        {
-            try
-            {
-                var role = User.FindFirst("Role").Value;
-                return Ok(role);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Authorize]
+        //[HttpGet("check")]
+        //public async Task<IActionResult> CheckAPI()
+        //{
+        //    try
+        //    {
+        //        var role = User.FindFirst("Role").Value;
+        //        return Ok(role);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
 
     }
