@@ -1649,10 +1649,13 @@ X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\Sys
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Formats.Asn1.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.IO.Pipelines.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Memory.Data.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Runtime.Caching.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Text.Json.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\af\Humanizer.resources.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\ar\Humanizer.resources.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -1799,6 +1802,7 @@ X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\run
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\Movie_Rental_Management.csproj.AssemblyReference.cache
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\Movie_Rental_Management.GeneratedMSBuildEditorConfig.editorconfig
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\Movie_Rental_Management.AssemblyInfoInputs.cache
@@ -1821,7 +1825,3 @@ X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\ref
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\Movie_Rental_Management.pdb
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\Movie_Rental_Management.genruntimeconfig.cache
 X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\obj\Debug\net8.0\ref\Movie_Rental_Management.dll
-X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.IO.Pipelines.dll
-X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Text.Encodings.Web.dll
-X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\System.Text.Json.dll
-X:\24th\Movie_Rental_System_BackEnd\Movie_Rental_Management\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
