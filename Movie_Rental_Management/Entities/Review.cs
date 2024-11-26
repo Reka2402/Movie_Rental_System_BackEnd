@@ -6,9 +6,9 @@
         public Guid CustomerId { get; set; }
         public Guid MovieId { get; set; }
         public DateTime ReviewedDate { get; set; }
-        public string Comments{ get; set; }
+        public string Comments { get; set; }
         public string Rating { get; set; }
-        public Customer customer { get; set; }
+        public Customer Customer { get; set; }
         public Movie movie { get; set; }
 
 

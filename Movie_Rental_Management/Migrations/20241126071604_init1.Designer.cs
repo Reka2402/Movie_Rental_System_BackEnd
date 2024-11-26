@@ -12,8 +12,8 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241121061948_tablesss")]
-    partial class tablesss
+    [Migration("20241126071604_init1")]
+    partial class init1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,24 +67,15 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("JoinDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MobileNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NIC")
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -95,9 +86,11 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Director", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -114,9 +107,11 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Genre", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -149,7 +144,7 @@ namespace Movie_Rental_Management.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("Inventory");
+                    b.ToTable("Inventories");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Movie", b =>
@@ -162,12 +157,11 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Director")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("DirectorId")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("GenreId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -180,18 +174,17 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReleaseDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
 
-                    b.Property<Guid>("directorId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("TotalCopies")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GenreId");
+                    b.HasIndex("DirectorId");
 
-                    b.HasIndex("directorId");
+                    b.HasIndex("GenreId");
 
                     b.ToTable("Movies");
                 });
@@ -239,9 +232,6 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<Guid>("Amonut")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CustomerId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("ReferenceId")
                         .HasColumnType("uniqueidentifier");
 
@@ -249,8 +239,6 @@ namespace Movie_Rental_Management.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
 
                     b.HasIndex("RentId");
 
@@ -362,7 +350,7 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Role")
+                    b.Property<int?>("Role")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -416,15 +404,15 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Movie", b =>
                 {
-                    b.HasOne("Movie_Rental_Management.Entities.Genre", "Genre")
+                    b.HasOne("Movie_Rental_Management.Entities.Director", "director")
                         .WithMany("Movies")
-                        .HasForeignKey("GenreId")
+                        .HasForeignKey("DirectorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movie_Rental_Management.Entities.Director", "director")
+                    b.HasOne("Movie_Rental_Management.Entities.Genre", "Genre")
                         .WithMany("Movies")
-                        .HasForeignKey("directorId")
+                        .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -446,10 +434,6 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Payment", b =>
                 {
-                    b.HasOne("Movie_Rental_Management.Entities.Customer", null)
-                        .WithMany("Payments")
-                        .HasForeignKey("CustomerId");
-
                     b.HasOne("Movie_Rental_Management.Entities.Rent", "Rent")
                         .WithMany()
                         .HasForeignKey("RentId")
@@ -462,7 +446,7 @@ namespace Movie_Rental_Management.Migrations
             modelBuilder.Entity("Movie_Rental_Management.Entities.Rent", b =>
                 {
                     b.HasOne("Movie_Rental_Management.Entities.Customer", "Customer")
-                        .WithMany("Rents")
+                        .WithMany()
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -480,8 +464,8 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Review", b =>
                 {
-                    b.HasOne("Movie_Rental_Management.Entities.Customer", "customer")
-                        .WithMany("Reviews")
+                    b.HasOne("Movie_Rental_Management.Entities.Customer", "Customer")
+                        .WithMany()
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -492,7 +476,7 @@ namespace Movie_Rental_Management.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("customer");
+                    b.Navigation("Customer");
 
                     b.Navigation("movie");
                 });
@@ -506,15 +490,6 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Movie_Rental_Management.Entities.Customer", b =>
-                {
-                    b.Navigation("Payments");
-
-                    b.Navigation("Rents");
-
-                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Director", b =>

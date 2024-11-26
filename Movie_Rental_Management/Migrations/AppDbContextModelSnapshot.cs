@@ -56,11 +56,9 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Customer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -90,10 +88,6 @@ namespace Movie_Rental_Management.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DirectorName")
                         .IsRequired()
@@ -173,9 +167,11 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReleaseDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TotalCopies")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -254,9 +250,6 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<Guid>("CustomerId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("CustomerId1")
-                        .HasColumnType("int");
-
                     b.Property<Guid>("MovieId")
                         .HasColumnType("uniqueidentifier");
 
@@ -271,7 +264,7 @@ namespace Movie_Rental_Management.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId1");
+                    b.HasIndex("CustomerId");
 
                     b.HasIndex("MovieId");
 
@@ -301,14 +294,11 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<DateTime>("ReviewedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("customerId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("CustomerId");
 
-                    b.HasIndex("customerId");
+                    b.HasIndex("MovieId");
 
                     b.ToTable("Reviews");
                 });
@@ -450,7 +440,7 @@ namespace Movie_Rental_Management.Migrations
                 {
                     b.HasOne("Movie_Rental_Management.Entities.Customer", "Customer")
                         .WithMany()
-                        .HasForeignKey("CustomerId1")
+                        .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -467,19 +457,19 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Review", b =>
                 {
+                    b.HasOne("Movie_Rental_Management.Entities.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Movie_Rental_Management.Entities.Movie", "movie")
                         .WithMany("Reviews")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movie_Rental_Management.Entities.Customer", "customer")
-                        .WithMany()
-                        .HasForeignKey("customerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("customer");
+                    b.Navigation("Customer");
 
                     b.Navigation("movie");
                 });
