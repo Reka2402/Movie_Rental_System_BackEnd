@@ -10,6 +10,6 @@ namespace Movie_Rental_Management.IService
         Task<Movie> GetDvdByIdAsync(Guid id);
         Task<Movie> UpdateDvdAsync(Guid id, MovieRequestDTO updateDvdDto);
         Task<string> DeleteDvdAsync(Guid id, int quantityToDelete);
-        Task<IEnumerable<Movie>> GetAllDvdsAsync();
+        Task<ICollection<Movie>> GetAllDvdsAsync();
     }
 }

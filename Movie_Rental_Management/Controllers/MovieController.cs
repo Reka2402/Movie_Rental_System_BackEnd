@@ -87,12 +87,11 @@ namespace Movie_Rental_Management.Controllers
         }
 
         [HttpGet("GetAllDvds")]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetAllDvds()
+        public async Task<IActionResult> GetAllDvds()
         {
             var dvds = await _managerService.GetAllDvdsAsync();
             return Ok(dvds);
         }
-
 
     }
 }

@@ -64,13 +64,13 @@ namespace Movie_Rental_Management.Repository
 
             if (director == null)
             {
-                director = await _context.Directors.FirstOrDefaultAsync(d => d.DirectorName == directorName);
+                director = await _context.Directors.FirstOrDefaultAsync(d => d.Name == directorName);
 
                 if (director == null)
                 {
                     director = new Director
                     {
-                        DirectorName = directorName,
+                        Name = directorName,
                       
                     };
 
@@ -152,9 +152,10 @@ namespace Movie_Rental_Management.Repository
 
 
         // Get All DVDs
-        public async Task<IEnumerable<Movie>> GetAllDvdsAsync()
+        public async Task<ICollection<Movie>> GetAllDvdsAsync()
         {
-            return await _context.Movies.Include(d => d.Genre).Include(d => d.director).ToListAsync();
+           var movies = await _context.Movies.Include(d => d.Genre).Include(d => d.director).ToListAsync();
+            return movies;
         }
 
         // Update Inventory

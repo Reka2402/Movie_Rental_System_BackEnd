@@ -138,9 +138,10 @@ namespace Movie_Rental_Management.Service
         }
 
 
-        public async Task<IEnumerable<Movie>> GetAllDvdsAsync()
+        public async Task<ICollection<Movie>> GetAllDvdsAsync()
         {
-            return await _movieRepository.GetAllDvdsAsync();
+            var moviesData = await _movieRepository.GetAllDvdsAsync();
+            return moviesData;
         }
 
     }

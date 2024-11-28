@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Movie_Rental_Management.Database;
+using Movie_Rental_Management.Entities;
 using Movie_Rental_Management.IService;
 using Movie_Rental_Management.Models.RequestModel;
 
@@ -11,11 +14,12 @@ namespace Movie_Rental_Management.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-       
+        private readonly AppDbContext _context;
         private readonly IUserservice _userService;
-        public UserController(IUserservice authService)
+        public UserController(IUserservice authService , AppDbContext context)
         {
             _userService = authService;
+            _context = context;
         }
         [HttpPost]
         public async Task<IActionResult> Register(UserRequestDTO user)
@@ -58,6 +62,50 @@ namespace Movie_Rental_Management.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
+        {
+            var users = await _context.Users
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Name,
+                    u.Email,
+                    u.PasswordHash,
+                    u.Role,
+                    
+                })
+                .ToListAsync();
+
+            return Ok(users);
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<object>> GetUser(Guid id)
+        {
+            var user = await _context.Users
+                .Where(u => u.Id == id)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Name,
+                    u.Email,
+                    u.PasswordHash,
+                    u.Role,
+
+                })
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+
+
+
 
 
     }

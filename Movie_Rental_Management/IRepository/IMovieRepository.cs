@@ -16,7 +16,7 @@ namespace Movie_Rental_Management.IRepository
         Task<Movie> GetDvdByIdAsync(Guid id);
         Task<Movie> UpdateDvdAsync(Movie dvd);
         Task<string> DeleteDvdAsync(Guid id, int quantityToDelete);
-        Task<IEnumerable<Movie>> GetAllDvdsAsync();
+        Task<ICollection<Movie>> GetAllDvdsAsync();
         Task UpdateInventoryAsync(Inventory inventory);
         Task RemoveInventory(Inventory inventory);
     }
