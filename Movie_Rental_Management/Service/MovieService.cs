@@ -1,4 +1,6 @@
-﻿using Movie_Rental_Management.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Movie_Rental_Management.Database;
+using Movie_Rental_Management.Entities;
 using Movie_Rental_Management.IRepository;
 using Movie_Rental_Management.IService;
 using Movie_Rental_Management.Models.RequestModel;
@@ -9,12 +11,16 @@ namespace Movie_Rental_Management.Service
     public class MovieService : IMovieService
     {
         private readonly IMovieRepository _movieRepository;
+        private readonly AppDbContext _context;
 
-        public MovieService(IMovieRepository dvdRepository)
+        public MovieService(IMovieRepository dvdRepository , AppDbContext context)
         {
             _movieRepository = dvdRepository;
+            _context = context;
         }
-   
+        
+     
+
 
         public async Task<Movie> AddDvdAsync(MovieRequestDTO movieRequestDTO)
         {
@@ -142,6 +148,16 @@ namespace Movie_Rental_Management.Service
         {
             var moviesData = await _movieRepository.GetAllDvdsAsync();
             return moviesData;
+        }
+        public List<Genre> GetAllGenres()
+        {
+            
+            return _context.Genres.ToList();
+        }
+        public List<Director> GetAllDirectors()
+        {
+            
+            return _context.Directors.ToList();
         }
 
     }

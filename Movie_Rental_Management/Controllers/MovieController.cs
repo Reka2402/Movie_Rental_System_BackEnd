@@ -92,6 +92,24 @@ namespace Movie_Rental_Management.Controllers
             var dvds = await _managerService.GetAllDvdsAsync();
             return Ok(dvds);
         }
+        [HttpGet("GetGenres")]
+        public ActionResult<List<Genre>> GetGenres()
+        {
+           
+            var genres = _managerService.GetAllGenres();
+
+            
+            return Ok(genres);
+        }
+        [HttpGet("GetDirectors")]
+        public ActionResult<List<Director>> GetDirectors()
+        {
+            // Call the service to get all directors
+            var directors = _managerService.GetAllDirectors();
+
+            // Return the directors as a response
+            return Ok(directors);
+        }
 
     }
 }
