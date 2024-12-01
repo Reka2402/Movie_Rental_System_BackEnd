@@ -252,14 +252,29 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<Guid>("MovieId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("RentalDays")
+                        .HasColumnType("int");
+
                     b.Property<DateOnly>("Rentaldate")
                         .HasColumnType("date");
+
+                    b.Property<int>("Rented")
+                        .HasColumnType("int");
 
                     b.Property<DateOnly>("RequestedDate")
                         .HasColumnType("date");
 
                     b.Property<DateOnly>("ReturnDate")
                         .HasColumnType("date");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("initialPrice")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
