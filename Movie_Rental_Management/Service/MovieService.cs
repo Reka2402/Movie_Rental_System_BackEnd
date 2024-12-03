@@ -28,7 +28,7 @@ namespace Movie_Rental_Management.Service
 
             var director = await _movieRepository.GetOrCreateDirectorAsync(movieRequestDTO.DirectorId, movieRequestDTO.DirectorName);
        
-                        var dvd = new Movie
+            var dvd = new Movie
             {
                 Id = Guid.NewGuid(),
                 MovieName = movieRequestDTO.MovieName,

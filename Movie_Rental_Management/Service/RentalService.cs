@@ -34,13 +34,13 @@ namespace Movie_Rental_Management.Service
 
         public void SendRentalRequest(Rent rent)
         {
-            // Get the movie price
+            
             var movie = _rentRepository.GetById(rent.MovieId);
 
             if (movie == null)
                 throw new Exception("Movie not found.");
 
-            // Calculate the total amount
+          
             rent.TotalAmount = movie.initialPrice * rent.RentalDays;  
 
             rent.Id = Guid.NewGuid();
