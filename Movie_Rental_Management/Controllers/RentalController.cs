@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Movie_Rental_Management.Entities;
 using Movie_Rental_Management.IService;
+using Movie_Rental_Management.Models.RequestModel;
+using Movie_Rental_Management.Models.ResponseModel;
 
 namespace Movie_Rental_Management.Controllers
 {
@@ -16,51 +18,40 @@ namespace Movie_Rental_Management.Controllers
         {
             _rentService = rentService;
         }
-
-        // Send a rental request
-        [HttpPost("request")]
-        public IActionResult SendRentalRequest([FromBody] Rent rent)
+        [HttpPost("Add_Rendal")]        
+        
+       public async Task <IActionResult> AddRental(Guid CustomerId,Guid MovieId, RentalrequestModel rentalrequestModel)
         {
-            _rentService.SendRentalRequest(rent);
-            return Ok("Rental request sent successfully.");
+            var data = await _rentService.AddRental(CustomerId,MovieId, rentalrequestModel);
+            return Ok(data);
         }
 
-        // Approve a rental request
-        [HttpPut("approve/{id}")]
-        public IActionResult ApproveRental(Guid id)
+        [HttpGet("Get_All_Rentals")]
+        public async Task<IActionResult> GetAllRentals()
         {
-            var rent = _rentService.GetRentById(id);
-            if (rent == null)
-                return NotFound("Rental request not found.");
-
-            _rentService.ApproveRental(id);
-            return Ok("Rental request approved.");
+            var data = await _rentService.GetAllRentals();
+            return Ok(data);
         }
 
-        // Mark as returned
-        [HttpPut("return/{id}")]
-        public IActionResult MarkAsReturned(Guid id)
+        [HttpGet("Get_By_Id")]
+        public async Task<IActionResult> GetById(Guid Id)
         {
-            var rent = _rentService.GetRentById(id);
-            if (rent == null)
-                return NotFound("Rental not found.");
-
-            _rentService.MarkAsReturned(id);
-            return Ok("Rental marked as returned.");
+            var data = await _rentService.GetById(Id);
+            return Ok(data);
         }
 
-        // Get all rentals
-        [HttpGet]
-        public IActionResult GetAllRents()
+        [HttpGet("Get_By_UserId")]
+        public async Task<IActionResult> GetByUserID(Guid UserId)
         {
-            return Ok(_rentService.GetAllRents());
+            var data = await _rentService.GetByUserID(UserId);
+            return Ok(data);
         }
 
-        // Get manager dashboard data
-        [HttpGet("dashboard")]
-        public IActionResult GetManagerDashboardData()
+        [HttpPut("Update")]
+        public async Task<IActionResult> UpdateRent(Guid Id, RentalrequestModel rentalrequestModel)
         {
-            return Ok(_rentService.GetManagerDashboardData());
+            var data = await _rentService.UpdateRent(Id, rentalrequestModel);
+            return Ok(data);
         }
     }
 }

@@ -10,5 +10,8 @@ namespace Movie_Rental_Management.Entities
         public string PasswordHash { get; set; }
         public Role ? Role { get; set; }
 
+        public Rent Rent { get; set; }
+
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Movie_Rental_Management.Database;
 using Movie_Rental_Management.Entities;
 using Movie_Rental_Management.IRepository;
@@ -13,43 +14,45 @@ namespace Movie_Rental_Management.Repository
         {
             _context = context;
         }
-        public Rent GetById(Guid id)
+
+        public async Task<Rent> AddRental(Rent rent)
         {
-            return _context.Rents
-                .Include(r => r.Movie)
-                .Include(r => r.Customer)
-                .FirstOrDefault(r => r.Id == id);
+            var data = await _context.Rents.AddAsync(rent);
+            await _context.SaveChangesAsync();
+            return data.Entity;
         }
 
-        public IEnumerable<Rent> GetAll()
+        public async Task<List<Rent>> GetAllRentals()
         {
-            return _context.Rents
-                .Include(r => r.Movie)
-                .Include(r => r.Customer)
-                .ToList();
+            var data = await _context.Rents.ToListAsync();
+            return data;
         }
 
-        public IEnumerable<Rent> GetAllForManagerDashboard()
+        public async Task<Rent> GetById(Guid Id)
         {
-            return _context.Rents
-                .Include(r => r.Movie)
-                .Include(r => r.Customer)
-                .Where(r => r.Status != Rent.RentStatus.Pending)
-                .ToList();
+            var data = await _context.Rents.FirstOrDefaultAsync(rent => rent.Id == Id);
+            return data;
+        }
+        public async Task<Rent> GetByUserID(Guid UserId)
+        {
+            var data = await _context.Rents.FirstOrDefaultAsync(a => a.userId == UserId);
+            return data;
         }
 
-        public void Add(Rent rent)
+        public async Task<Rent> UpdateRent(Rent rent)
         {
-            _context.Rents.Add(rent);
-            _context.SaveChanges();
-        }
-
-        public void Update(Rent rent)
-        {
+            var data = await GetById(rent.Id);
+            if (data == null) return null;
+            
+            data.Status = rent.Status;
             _context.Rents.Update(rent);
-            _context.SaveChanges();
-        }
+            await _context.SaveChangesAsync();
+            return data;
 
+
+        }
+        
+      
 
     }
 }

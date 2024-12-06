@@ -3,7 +3,7 @@
     public class MovieResponseDTO
     {
        
-            public Guid Id { get; set; }
+            public int Id { get; set; }
             public string MovieName { get; set; }
             public int DirectorId { get; set; }
             public int GenreId { get; set; }

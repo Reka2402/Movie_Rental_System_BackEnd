@@ -26,6 +26,12 @@ namespace Movie_Rental_Management.Repository
             return data;
         }
 
+        public async Task<User> GetUserById(Guid Id)
+        {
+            var data = await _dBContext.Users.FirstOrDefaultAsync(a => a.Id == Id);
+            return data;
+        }
+
 
 
 

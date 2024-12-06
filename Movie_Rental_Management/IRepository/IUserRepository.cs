@@ -7,6 +7,7 @@ namespace Movie_Rental_Management.IRepository
     {
         Task<User> AddUser(User user);
         Task<User> GetUserByEmail(string email);
+        Task<User> GetUserById(Guid Id);
 
     }
 }

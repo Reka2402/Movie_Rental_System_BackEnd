@@ -19,5 +19,6 @@ namespace Movie_Rental_Management.IRepository
         Task<ICollection<Movie>> GetAllDvdsAsync();
         Task UpdateInventoryAsync(Inventory inventory);
         Task RemoveInventory(Inventory inventory);
+     
     }
 }

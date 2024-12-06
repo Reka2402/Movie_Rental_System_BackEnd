@@ -14,6 +14,10 @@
         public Director? director { get; set; }
         public ICollection<Review>? Reviews { get; set; }
         public int TotalCopies { get; set; }
+
+        public ICollection<Rent>
+            Rent { get; set; }
+
      
     }
 }

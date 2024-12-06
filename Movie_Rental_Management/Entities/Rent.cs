@@ -3,25 +3,30 @@
     public class Rent
     {
         public Guid Id { get; set; }    
-        public Guid CustomerId { get; set; }
+        public Guid userId { get; set; }
         public int initialPrice { get; set; }
         public Guid MovieId { get; set; }
-        public DateOnly RequestedDate { get; set; }
-        public DateOnly ApporovedDate { get; set; }
-        public  DateOnly Rentaldate { get; set; }
-        public DateOnly ReturnDate { get; set; }
+        public DateTime RequestedDate { get; set; }
+        public DateTime ApporovedDate { get; set; }
+        public  DateTime RentalDate { get; set; }
+        public DateTime ReturnDate { get; set; }
         public int RentalDays { get; set; }
-        public int Rented { get; set; }
+     
         public decimal TotalAmount { get; set; }
-        public Customer Customer { get; set; }
+        public User user { get; set; }
         public Movie Movie { get; set; }
-        public RentStatus Status { get; set; }
+        public bool Isoverdue { get; set; } = false;
+        public RentStatus Status { get; set; } 
+      }
         public enum RentStatus
         {
-            Rented = 0,
-            Pending = 1,
-            Returned = 2,
-            Overdue = 3,
+            Rented = 1,
+            Pending = 2,
+            Approved = 3,
+            Returned = 4,
+            Overdue = 5,
         }
     }
-}
+
+
+

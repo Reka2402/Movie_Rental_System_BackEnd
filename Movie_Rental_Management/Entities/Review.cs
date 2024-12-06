@@ -9,7 +9,7 @@
         public string Comments { get; set; }
         public string Rating { get; set; }
         public Customer Customer { get; set; }
-        public Movie movie { get; set; }
+        public Movie Movie { get; set; }
 
 
     }

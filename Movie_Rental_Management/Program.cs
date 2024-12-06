@@ -32,6 +32,8 @@ builder.Services.AddScoped<IRentalRepository,RentalRepository>();
 builder.Services.AddScoped<IContactUsService, ContactUsService>();
 builder.Services.AddScoped<IContactUsRepository, ContactUsRepository>();
 
+
+
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]);
 
