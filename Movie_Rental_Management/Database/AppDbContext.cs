@@ -21,7 +21,7 @@ namespace Movie_Rental_Management.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Payment> Payment { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
+        //public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ContactUs> ContactUs { get; set; }
     }

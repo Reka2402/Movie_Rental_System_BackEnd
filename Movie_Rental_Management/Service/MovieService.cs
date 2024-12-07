@@ -155,8 +155,7 @@ namespace Movie_Rental_Management.Service
             return _context.Genres.ToList();
         }
         public List<Director> GetAllDirectors()
-        {
-            
+        {            
             return _context.Directors.ToList();
         }
 

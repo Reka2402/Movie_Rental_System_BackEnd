@@ -48,11 +48,53 @@ namespace Movie_Rental_Management.Repository
             _context.Rents.Update(rent);
             await _context.SaveChangesAsync();
             return data;
-
-
         }
-        
-      
+
+
+
+
+        //public async Task<IEnumerable<Rent>> GetAllRentals()
+        //{
+        //    return await _context.Rents.Include(r => r.Movie).Include(r => r.Customer).ToListAsync();
+        //}
+
+        //public async Task<Rent> GetRentalById(Guid id)
+        //{
+        //    return await _context.Rents.Include(r => r.Movie).Include(r => r.Customer).FirstOrDefaultAsync(r => r.Id == id);
+        //}
+
+        //public async Task CreateRental(Rent rental)
+        //{
+        //    _context.Rents.Add(rental);
+        //    await _context.SaveChangesAsync();
+        //}
+
+        //public async Task UpdateRental(Rent rental)
+        //{
+        //    _context.Rents.Update(rental);
+        //    await _context.SaveChangesAsync();
+        //}
+
+        //public async Task DeleteRental(Guid id)
+        //{
+        //    var rental = await _context.Rents.FindAsync(id);
+        //    if (rental != null)
+        //    {
+        //        _context.Rents.Remove(rental);
+        //        await _context.SaveChangesAsync();
+        //    }
+        //}
+
+        //public async Task<IEnumerable<Rent>> GetRentalsByCustomerId(Guid customerId)
+        //{
+        //    return await _context.Rents
+        //                         .Where(r => r.CustomerId == customerId)
+        //                         .Include(r => r.DVD)
+        //                         .Include(r => r.Customer)
+        //                         .ToListAsync();
+        //}
+
+
 
     }
 }

@@ -151,51 +151,25 @@
   },
   {
     "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
-    "Method": "GetAllRents",
-    "RelativePath": "api/Rental",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
-    "Method": "ApproveRental",
-    "RelativePath": "api/Rental/approve/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
-    "Method": "GetManagerDashboardData",
-    "RelativePath": "api/Rental/dashboard",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
-    "Method": "SendRentalRequest",
-    "RelativePath": "api/Rental/request",
+    "Method": "AddRental",
+    "RelativePath": "api/Rental/Add_Rendal",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "rent",
-        "Type": "Movie_Rental_Management.Entities.Rent",
+        "Name": "CustomerId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "MovieId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "rentalrequestModel",
+        "Type": "Movie_Rental_Management.Models.RequestModel.RentalrequestModel",
         "IsRequired": true
       }
     ],
@@ -203,15 +177,62 @@
   },
   {
     "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
-    "Method": "MarkAsReturned",
-    "RelativePath": "api/Rental/return/{id}",
+    "Method": "GetAllRentals",
+    "RelativePath": "api/Rental/Get_All_Rentals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
+    "Method": "GetById",
+    "RelativePath": "api/Rental/Get_By_Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
+    "Method": "GetByUserID",
+    "RelativePath": "api/Rental/Get_By_UserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
+    "Method": "UpdateRent",
+    "RelativePath": "api/Rental/Update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "rentalrequestModel",
+        "Type": "Movie_Rental_Management.Models.RequestModel.RentalrequestModel",
         "IsRequired": true
       }
     ],
