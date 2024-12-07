@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "R23gZM4r02xouDaoL4jmYbcJ341OvwrOVeouIq+2A0Q=",
+  "Hash": "xgEDaKUDPY88Jz9HnZvi58ZLiyPZ3qIIh05S9XwJ49I=",
   "Source": "Movie_Rental_Management",
   "BasePath": "_content/Movie_Rental_Management",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
