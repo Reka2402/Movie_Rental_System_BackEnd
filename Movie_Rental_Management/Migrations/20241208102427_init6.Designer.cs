@@ -12,8 +12,8 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241207055531_init 18")]
-    partial class init18
+    [Migration("20241208102427_init6")]
+    partial class init6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -227,7 +227,7 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RecieverId")
+                    b.Property<Guid>("ReceiverId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Title")
@@ -240,6 +240,9 @@ namespace Movie_Rental_Management.Migrations
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ViewStatus")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -313,8 +316,7 @@ namespace Movie_Rental_Management.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.HasIndex("userId")
-                        .IsUnique();
+                    b.HasIndex("userId");
 
                     b.ToTable("Rents");
                 });
@@ -387,7 +389,15 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Nic")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -397,28 +407,6 @@ namespace Movie_Rental_Management.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("Movie_Rental_Management.Entities.UserRole", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("RoleId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRoles");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Address", b =>
@@ -493,8 +481,8 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired();
 
                     b.HasOne("Movie_Rental_Management.Entities.User", "user")
-                        .WithOne("Rent")
-                        .HasForeignKey("Movie_Rental_Management.Entities.Rent", "userId")
+                        .WithMany("Rent")
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -522,17 +510,6 @@ namespace Movie_Rental_Management.Migrations
                     b.Navigation("Movie");
                 });
 
-            modelBuilder.Entity("Movie_Rental_Management.Entities.UserRole", b =>
-                {
-                    b.HasOne("Movie_Rental_Management.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Movie_Rental_Management.Entities.Director", b =>
                 {
                     b.Navigation("Movies");
@@ -552,8 +529,7 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.User", b =>
                 {
-                    b.Navigation("Rent")
-                        .IsRequired();
+                    b.Navigation("Rent");
                 });
 #pragma warning restore 612, 618
         }

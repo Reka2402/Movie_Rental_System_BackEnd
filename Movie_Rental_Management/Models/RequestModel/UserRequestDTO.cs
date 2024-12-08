@@ -7,6 +7,9 @@ namespace Movie_Rental_Management.Models.RequestModel
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Nic { get; set; }
+        public string Phone{ get; set; }
+
         public Role Role { get; set; }
     }
 }

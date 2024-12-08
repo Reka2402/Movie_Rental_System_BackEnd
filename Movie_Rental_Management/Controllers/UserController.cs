@@ -71,10 +71,12 @@ namespace Movie_Rental_Management.Controllers
                 {
                     u.Id,
                     u.Name,
-                    u.Email,
-                    u.PasswordHash,
+                    u.Email,               
+                    u.Nic,
+                    u.Phone,
                     u.Role,
-                    
+                    u.PasswordHash,
+
                 })
                 .ToListAsync();
 
@@ -89,9 +91,11 @@ namespace Movie_Rental_Management.Controllers
                 {
                     u.Id,
                     u.Name,
-                    u.Email,
-                    u.PasswordHash,
+                    u.Email,              
+                    u.Nic,
+                    u.Phone,
                     u.Role,
+                    u.PasswordHash,
 
                 })
                 .FirstOrDefaultAsync();

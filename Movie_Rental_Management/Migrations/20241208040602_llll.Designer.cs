@@ -12,8 +12,8 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241206105220_init2")]
-    partial class init2
+    [Migration("20241208040602_llll")]
+    partial class llll
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -399,28 +399,6 @@ namespace Movie_Rental_Management.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Movie_Rental_Management.Entities.UserRole", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("RoleId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRoles");
-                });
-
             modelBuilder.Entity("Movie_Rental_Management.Entities.Address", b =>
                 {
                     b.HasOne("Movie_Rental_Management.Entities.User", "User")
@@ -520,17 +498,6 @@ namespace Movie_Rental_Management.Migrations
                     b.Navigation("Customer");
 
                     b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("Movie_Rental_Management.Entities.UserRole", b =>
-                {
-                    b.HasOne("Movie_Rental_Management.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Director", b =>

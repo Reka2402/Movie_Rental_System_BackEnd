@@ -224,7 +224,7 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RecieverId")
+                    b.Property<Guid>("ReceiverId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Title")
@@ -237,6 +237,9 @@ namespace Movie_Rental_Management.Migrations
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ViewStatus")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -310,8 +313,7 @@ namespace Movie_Rental_Management.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.HasIndex("userId")
-                        .IsUnique();
+                    b.HasIndex("userId");
 
                     b.ToTable("Rents");
                 });
@@ -384,7 +386,15 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Nic")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -468,8 +478,8 @@ namespace Movie_Rental_Management.Migrations
                         .IsRequired();
 
                     b.HasOne("Movie_Rental_Management.Entities.User", "user")
-                        .WithOne("Rent")
-                        .HasForeignKey("Movie_Rental_Management.Entities.Rent", "userId")
+                        .WithMany("Rent")
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -516,8 +526,7 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.User", b =>
                 {
-                    b.Navigation("Rent")
-                        .IsRequired();
+                    b.Navigation("Rent");
                 });
 #pragma warning restore 612, 618
         }

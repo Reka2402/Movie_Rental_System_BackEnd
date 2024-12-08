@@ -6,7 +6,7 @@ namespace Movie_Rental_Management.IService
 {
     public interface IRentalService
     {
-        Task<RentalResponseModel> AddRental(Guid CustomerId,Guid MovieId, RentalrequestModel rentalrequestModel);
+        Task<RentalResponseModel> AddRental(RentalrequestModel rentalrequestModel);
         Task<List<RentalResponseModel>> GetAllRentals();
         Task<RentalResponseModel> GetById(Guid Id);
         Task<RentalResponseModel> GetByUserID(Guid UserId);

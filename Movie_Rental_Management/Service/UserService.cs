@@ -26,7 +26,9 @@ namespace Movie_Rental_Management.Service
                 Name = userRequest.Name,
                 Email = userRequest.Email,
                 Role = userRequest.Role,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRequest.Password)
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRequest.Password),
+                Nic = userRequest.Nic,
+                Phone = userRequest.Phone,
             };
             var user = await _userRepository.AddUser(req);
             var token = CreateToken(user);
@@ -54,6 +56,8 @@ namespace Movie_Rental_Management.Service
             claimsList.Add(new Claim("Id", user.Id.ToString()));
             claimsList.Add(new Claim("Name", user.Name));
             claimsList.Add(new Claim("Email", user.Email));
+            claimsList.Add(new Claim("Nic", user.Nic));
+            claimsList.Add(new Claim("Phone", user.Phone));
             claimsList.Add(new Claim("Role", user.Role.ToString()));
 
 

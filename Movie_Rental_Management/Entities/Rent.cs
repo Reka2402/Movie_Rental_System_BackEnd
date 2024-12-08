@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }    
         public Guid userId { get; set; }
-        public int initialPrice { get; set; }
+       public int initialPrice { get; set; }
         public Guid MovieId { get; set; }
         public DateTime RequestedDate { get; set; }
         public DateTime ApporovedDate { get; set; }
