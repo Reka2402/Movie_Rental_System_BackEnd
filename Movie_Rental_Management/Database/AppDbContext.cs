@@ -24,6 +24,26 @@ namespace Movie_Rental_Management.Database
         //public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ContactUs> ContactUs { get; set; }
+        public DbSet<Favouirtes> Favourites { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Define composite key for Favourite entity
+            modelBuilder.Entity<Favouirtes>()
+                .HasKey(f => new { f.UserId, f.MovieId });
+
+            // Optionally, you can also configure relationships
+            modelBuilder.Entity<Favouirtes>()
+                .HasOne(f => f.User)
+                .WithMany(u => u.Favourites)
+                .HasForeignKey(f => f.UserId);
+
+            modelBuilder.Entity<Favouirtes>()
+                .HasOne(f => f.Movie)
+                .WithMany(m => m.Favourites)
+                .HasForeignKey(f => f.MovieId);
+        }
     }
 }
 

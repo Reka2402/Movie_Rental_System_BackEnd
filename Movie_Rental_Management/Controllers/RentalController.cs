@@ -55,6 +55,8 @@ namespace Movie_Rental_Management.Controllers
             return Ok(data);
         }
 
+
+
         //[HttpGet]
         //public async Task<IActionResult> GetAllRentals()
         //{

@@ -31,6 +31,8 @@ builder.Services.AddScoped<IRentalService, RentalService>();
 builder.Services.AddScoped<IRentalRepository,RentalRepository>();
 builder.Services.AddScoped<IContactUsService, ContactUsService>();
 builder.Services.AddScoped<IContactUsRepository, ContactUsRepository>();
+builder.Services.AddScoped<IFavouirtesRepository, FavouriteRepository>();
+builder.Services.AddScoped<IFavouritesService, FavouriteService>();
 
 
 

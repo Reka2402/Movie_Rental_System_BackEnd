@@ -11,7 +11,7 @@
         public  DateTime RentalDate { get; set; }
         public DateTime ReturnDate { get; set; }
         public int RentalDays { get; set; }
-     
+        public int RentalQuantity { get; set; }
         public decimal TotalAmount { get; set; }
         public User user { get; set; }
         public Movie Movie { get; set; }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Movie_Rental_Management.Database;
 
@@ -11,9 +12,11 @@ using Movie_Rental_Management.Database;
 namespace Movie_Rental_Management.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241209061720_hhhhh")]
+    partial class hhhhh
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -126,21 +129,6 @@ namespace Movie_Rental_Management.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Directors");
-                });
-
-            modelBuilder.Entity("Movie_Rental_Management.Entities.Favouirtes", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("MovieId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("UserId", "MovieId");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("Favourites");
                 });
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Genre", b =>
@@ -435,25 +423,6 @@ namespace Movie_Rental_Management.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Movie_Rental_Management.Entities.Favouirtes", b =>
-                {
-                    b.HasOne("Movie_Rental_Management.Entities.Movie", "Movie")
-                        .WithMany("Favourites")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Movie_Rental_Management.Entities.User", "User")
-                        .WithMany("Favourites")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movie");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Movie_Rental_Management.Entities.Inventory", b =>
                 {
                     b.HasOne("Movie_Rental_Management.Entities.Movie", "Movie")
@@ -556,8 +525,6 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.Movie", b =>
                 {
-                    b.Navigation("Favourites");
-
                     b.Navigation("Rent");
 
                     b.Navigation("Reviews");
@@ -565,8 +532,6 @@ namespace Movie_Rental_Management.Migrations
 
             modelBuilder.Entity("Movie_Rental_Management.Entities.User", b =>
                 {
-                    b.Navigation("Favourites");
-
                     b.Navigation("Rent");
                 });
 #pragma warning restore 612, 618

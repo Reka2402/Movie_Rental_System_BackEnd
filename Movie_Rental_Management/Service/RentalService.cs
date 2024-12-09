@@ -38,6 +38,7 @@ namespace Movie_Rental_Management.Service
                 ReturnDate = rentalrequestModel.ReturnDate,
                 RentalDays = (rentalrequestModel.ReturnDate - rentalrequestModel.RentalDate).Days,  
                 TotalAmount = rentalrequestModel.TotalAmount,
+                RentalQuantity= rentalrequestModel.RentalQuantity,
                 Isoverdue = rentalrequestModel.Isoverdue,
                 Status = rentalrequestModel.Status
             };
@@ -56,6 +57,7 @@ namespace Movie_Rental_Management.Service
                 ReturnDate = data.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = data.RentalDays,
                 TotalAmount = data.TotalAmount,
+                RentalQuantity= data.RentalQuantity,
                 Isoverdue = data.Isoverdue,
                 Status = data.Status.ToString()
             };
@@ -78,6 +80,7 @@ namespace Movie_Rental_Management.Service
                 ReturnDate = a.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = a.RentalDays,
                 TotalAmount = a.TotalAmount,
+                RentalQuantity= a.RentalQuantity,
                 Isoverdue = a.Isoverdue,
                 Status = a.Status.ToString()
 
@@ -101,6 +104,7 @@ namespace Movie_Rental_Management.Service
                 ReturnDate = data.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = data.RentalDays,
                 TotalAmount = data.TotalAmount,
+                RentalQuantity = data.RentalQuantity,
                 Isoverdue = data.Isoverdue,
                 Status = data.Status.ToString()
             };
@@ -122,6 +126,7 @@ namespace Movie_Rental_Management.Service
                 RentalDate = data.RentalDate.ToString("yyyy-MM-dd"),
                 ReturnDate = data.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = data.RentalDays,
+                RentalQuantity=data.RentalQuantity,
                 TotalAmount = data.TotalAmount,
                 Isoverdue = data.Isoverdue,
                 Status = data.Status.ToString()
@@ -150,6 +155,7 @@ namespace Movie_Rental_Management.Service
                 RentalDate = data.RentalDate.ToString("yyyy-MM-dd"),
                 ReturnDate = data.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = data.RentalDays,
+                RentalQuantity = data.RentalQuantity,
                 TotalAmount = data.TotalAmount,
                 Isoverdue = data.Isoverdue,
                 Status = data.Status.ToString()

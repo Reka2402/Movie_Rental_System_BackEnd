@@ -17,7 +17,8 @@
 
         public ICollection<Rent>
             Rent { get; set; }
+        public ICollection<Favouirtes> Favourites { get; set; }
 
-     
+
     }
 }

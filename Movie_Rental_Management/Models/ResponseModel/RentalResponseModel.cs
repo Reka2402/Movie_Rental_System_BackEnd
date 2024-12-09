@@ -13,7 +13,7 @@ namespace Movie_Rental_Management.Models.ResponseModel
         public string RentalDate { get; set; }
         public  string ReturnDate { get; set; }
         public int RentalDays { get; set; }
-
+        public int RentalQuantity { get; set; }
         public decimal TotalAmount { get; set; }
         public bool Isoverdue { get; set; } = false;
         public string Status { get; set; }
