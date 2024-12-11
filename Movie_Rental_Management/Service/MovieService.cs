@@ -13,13 +13,13 @@ namespace Movie_Rental_Management.Service
         private readonly IMovieRepository _movieRepository;
         private readonly AppDbContext _context;
 
-        public MovieService(IMovieRepository dvdRepository , AppDbContext context)
+        public MovieService(IMovieRepository dvdRepository, AppDbContext context)
         {
             _movieRepository = dvdRepository;
             _context = context;
         }
-        
-     
+
+
 
 
         public async Task<Movie> AddDvdAsync(MovieRequestDTO movieRequestDTO)
@@ -27,7 +27,7 @@ namespace Movie_Rental_Management.Service
             var genre = await _movieRepository.GetOrCreateGenreAsync(movieRequestDTO.GenreId, movieRequestDTO.GenreName);
 
             var director = await _movieRepository.GetOrCreateDirectorAsync(movieRequestDTO.DirectorId, movieRequestDTO.DirectorName);
-       
+
             var dvd = new Movie
             {
                 Id = Guid.NewGuid(),
@@ -151,11 +151,11 @@ namespace Movie_Rental_Management.Service
         }
         public List<Genre> GetAllGenres()
         {
-            
+
             return _context.Genres.ToList();
         }
         public List<Director> GetAllDirectors()
-        {            
+        {
             return _context.Directors.ToList();
         }
 
@@ -163,4 +163,3 @@ namespace Movie_Rental_Management.Service
 
 
 }
-

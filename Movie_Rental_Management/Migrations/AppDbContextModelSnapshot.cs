@@ -136,6 +136,9 @@ namespace Movie_Rental_Management.Migrations
                     b.Property<Guid>("MovieId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("UserId", "MovieId");
 
                     b.HasIndex("MovieId");

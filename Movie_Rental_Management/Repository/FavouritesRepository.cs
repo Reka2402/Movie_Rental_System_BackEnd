@@ -18,21 +18,33 @@ namespace Movie_Rental_Management.Repository
                 _context = context;
             }
 
-           
 
-            public async Task AddToFavouriteAsync(Guid userId, Guid movieId)
+
+        public async Task AddToFavouriteAsync(Guid userId, Guid movieId)
+        {
+            // Check if the record already exists
+            var existingFavourite = await _context.Favourites
+                .FirstOrDefaultAsync(f => f.UserId == userId && f.MovieId == movieId);
+
+            if (existingFavourite != null)
             {
-                var favourite = new Favouirtes
-                {
-                    UserId = userId,
-                    MovieId = movieId
-                };
-
-                await _context.Favourites.AddAsync(favourite);
-                await _context.SaveChangesAsync();
+                // Optionally, you can throw an exception or return early
+                throw new InvalidOperationException("This movie is already added to the user's favorites.");
             }
 
-            public async Task<IEnumerable<Movie>> GetFavouriteMoviesAsync(Guid userId)
+            // Add the new favorite if it doesn't exist
+            var favourite = new Favouirtes
+            {
+                Id = Guid.NewGuid(),
+                UserId = userId,  
+                MovieId = movieId
+            };
+
+            await _context.Favourites.AddAsync(favourite);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Movie>> GetFavouriteMoviesAsync(Guid userId)
             {
                 return await _context.Favourites
                     .Where(f => f.UserId == userId)

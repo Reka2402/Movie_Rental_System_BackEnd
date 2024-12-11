@@ -24,7 +24,8 @@ namespace Movie_Rental_Management.Repository
 
         public async Task<List<Rent>> GetAllRentals()
         {
-            var data = await _context.Rents.ToListAsync();
+          
+            var data = await _context.Rents.Include(d => d.user).Include(d => d.Movie).ToListAsync();
             return data;
         }
 

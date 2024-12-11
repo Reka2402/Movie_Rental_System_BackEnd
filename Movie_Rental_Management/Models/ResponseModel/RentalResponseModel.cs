@@ -17,5 +17,7 @@ namespace Movie_Rental_Management.Models.ResponseModel
         public decimal TotalAmount { get; set; }
         public bool Isoverdue { get; set; } = false;
         public string Status { get; set; }
+        public User user { get; set; }
+        public Movie Movie { get; set; }
     }
 }

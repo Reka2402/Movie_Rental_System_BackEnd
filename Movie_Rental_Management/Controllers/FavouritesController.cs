@@ -16,12 +16,20 @@ namespace Movie_Rental_Management.Controllers
             _favouriteService = favouriteService;
         }
 
-        [HttpPost("add")]
-        public async Task<IActionResult> AddToFavourite(Guid userId, Guid movieId)
+        [HttpGet("add/{userId}/{movieId}")]
+        public async Task<IActionResult> AddToFavourite( Guid userId, Guid movieId)
         {
-            await _favouriteService.AddToFavouriteAsync(userId, movieId);
-            return Ok(new { message = "Movie added to favourites" });
+            try
+            {
+                await _favouriteService.AddToFavouriteAsync(userId, movieId);
+                return Ok(new { message = "Movie added to favorites" });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
+
 
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetFavouriteMovies(Guid userId)
