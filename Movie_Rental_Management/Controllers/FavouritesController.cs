@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Movie_Rental_Management.Database;
+using Movie_Rental_Management.Entities;
 using Movie_Rental_Management.IService;
 
 namespace Movie_Rental_Management.Controllers
@@ -11,9 +14,14 @@ namespace Movie_Rental_Management.Controllers
 
         private readonly IFavouritesService _favouriteService;
 
-        public FavouritesController(IFavouritesService favouriteService)
+        private readonly AppDbContext _context;
+
+      
+
+        public FavouritesController(IFavouritesService favouriteService , AppDbContext context)
         {
             _favouriteService = favouriteService;
+            _context = context;
         }
 
         [HttpGet("add/{userId}/{movieId}")]
@@ -42,6 +50,27 @@ namespace Movie_Rental_Management.Controllers
 
             return Ok(favouriteMovies);
         }
+        [HttpDelete("delete/{favouriteId}")]
+        public async Task<IActionResult> DeleteFavourite(Guid favouriteId)
+        {
+            try
+            {
+                // Call the service to delete the favourite
+                await _favouriteService.DeleteFavouriteAsync(favouriteId);
+                return Ok(new { message = "Favourite movie removed successfully" });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while removing the favourite", details = ex.Message });
+            }
+        }
+
+
+
     }
 }
     

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vL1spphMxrM=",
+  "dgSpecHash": "WarnA/3FCps=",
   "success": true,
-  "projectFilePath": "X:\\DEC\\12th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+  "projectFilePath": "X:\\DEC\\New folder\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\UT01336\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\UT01336\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

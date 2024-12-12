@@ -22,17 +22,17 @@ namespace Movie_Rental_Management.Repository
 
         public async Task AddToFavouriteAsync(Guid userId, Guid movieId)
         {
-            // Check if the record already exists
+            
             var existingFavourite = await _context.Favourites
                 .FirstOrDefaultAsync(f => f.UserId == userId && f.MovieId == movieId);
 
             if (existingFavourite != null)
             {
-                // Optionally, you can throw an exception or return early
+               
                 throw new InvalidOperationException("This movie is already added to the user's favorites.");
             }
 
-            // Add the new favorite if it doesn't exist
+           
             var favourite = new Favouirtes
             {
                 Id = Guid.NewGuid(),

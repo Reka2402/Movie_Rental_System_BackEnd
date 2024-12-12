@@ -7,5 +7,6 @@ namespace Movie_Rental_Management.IService
     {
         Task AddToFavouriteAsync(Guid userId, Guid movieId);
         Task<IEnumerable<Movie>> GetFavouriteMoviesAsync(Guid userId);
+        Task DeleteFavouriteAsync(Guid favouriteId);
     }
 }
