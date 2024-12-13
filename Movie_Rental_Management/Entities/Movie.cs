@@ -18,7 +18,7 @@
         public ICollection<Rent>
             Rent { get; set; }
         public ICollection<Favouirtes> Favourites { get; set; }
-
+        public ICollection<Reservation> Reservations { get; set; }
 
     }
 }

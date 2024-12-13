@@ -25,6 +25,7 @@ namespace Movie_Rental_Management.Database
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ContactUs> ContactUs { get; set; }
         public DbSet<Favouirtes> Favourites { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -43,6 +44,17 @@ namespace Movie_Rental_Management.Database
                 .HasOne(f => f.Movie)
                 .WithMany(m => m.Favourites)
                 .HasForeignKey(f => f.MovieId);
+
+            modelBuilder.Entity<Reservation>()
+            .HasOne(r => r.User)
+              .WithMany(u => u.Reservations)
+              .HasForeignKey(r => r.UserId);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Movie)
+                .WithMany(m => m.Reservations)
+                .HasForeignKey(r => r.MovieId);
+
         }
     }
 }

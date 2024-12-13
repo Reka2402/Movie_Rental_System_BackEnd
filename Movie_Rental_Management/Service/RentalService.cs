@@ -12,57 +12,83 @@ namespace Movie_Rental_Management.Service
     {
         private readonly IRentalRepository _rentRepository;
         private readonly IMovieRepository _movieRepository;
-      
+        private readonly IEmailService _emailService;
+        private readonly IUserRepository _userRepository;
 
-        public RentalService(IRentalRepository rentRepository, IMovieRepository movieRepository)
+
+        public RentalService(IRentalRepository rentRepository, IMovieRepository movieRepository, IEmailService emailService, IUserRepository userRepository)
         {
             _rentRepository = rentRepository;
             _movieRepository = movieRepository;
-         
+            _emailService = emailService;
+            _userRepository = userRepository;
+
         }
 
-        public async Task<RentalResponseModel> AddRental( RentalrequestModel rentalrequestModel)
+        public async Task<RentalResponseModel> AddRental(RentalrequestModel rentalrequestModel)
         {
-           
             var movie = await _movieRepository.GetDvdByIdAsync(rentalrequestModel.MovieId);
 
             var rental = new Rent
             {
                 Id = Guid.NewGuid(),
-               userId= rentalrequestModel.userId,
+                userId = rentalrequestModel.userId,
                 initialPrice = movie.Price,
                 MovieId = rentalrequestModel.MovieId,
                 RequestedDate = DateTime.UtcNow,
                 ApporovedDate = rentalrequestModel.ApporovedDate,
                 RentalDate = rentalrequestModel.RentalDate,
                 ReturnDate = rentalrequestModel.ReturnDate,
-                RentalDays = (rentalrequestModel.ReturnDate - rentalrequestModel.RentalDate).Days,  
+                RentalDays = (rentalrequestModel.ReturnDate - rentalrequestModel.RentalDate).Days,
                 TotalAmount = rentalrequestModel.TotalAmount,
-                RentalQuantity= rentalrequestModel.RentalQuantity,
+                RentalQuantity = rentalrequestModel.RentalQuantity,
                 Isoverdue = rentalrequestModel.Isoverdue,
                 Status = rentalrequestModel.Status
             };
 
             var data = await _rentRepository.AddRental(rental);
 
+            // Email notification logic
+            var user = await _userRepository.GetUserById(rentalrequestModel.userId); // Assume a repository to get user details
+            var emailBody = $@"
+            Dear {user.Name},
+                 Your rental request for the movie '{movie.MovieName}' has been successfully processed.
+                    Details:
+                    - Rental Date: {rental.RentalDate:yyyy-MM-dd}
+                    - Return Date: {rental.ReturnDate:yyyy-MM-dd}
+                      - Total Amount: {rental.TotalAmount:C}
+                     Thank you for using our service!";
+
+            try
+            {
+                await _emailService.SendEmailAsync(user.Email, "Rental Confirmation", emailBody);
+            }
+            catch (Exception ex)
+            {
+                // Log the email failure but proceed with the response
+                Console.WriteLine($"Failed to send email notification: {ex.Message}");
+            }
+
             var response = new RentalResponseModel
             {
                 Id = data.Id,
-               userId = data.userId, 
+                userId = data.userId,
                 initialPrice = data.initialPrice,
                 MovieId = data.MovieId,
                 RequestedDate = data.RequestedDate.ToString("yyyy-MM-dd"),
-                ApporovedDate = data.ApporovedDate.ToString("yyyy-MM-dd"), 
+                ApporovedDate = data.ApporovedDate.ToString("yyyy-MM-dd"),
                 RentalDate = data.RentalDate.ToString("yyyy-MM-dd"),
                 ReturnDate = data.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = data.RentalDays,
                 TotalAmount = data.TotalAmount,
-                RentalQuantity= data.RentalQuantity,
+                RentalQuantity = data.RentalQuantity,
                 Isoverdue = data.Isoverdue,
                 Status = data.Status.ToString()
             };
+
             return response;
         }
+
 
         public async Task<List<RentalResponseModel>> GetAllRentals()
         {
@@ -80,7 +106,7 @@ namespace Movie_Rental_Management.Service
                 ReturnDate = a.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = a.RentalDays,
                 TotalAmount = a.TotalAmount,
-                RentalQuantity= a.RentalQuantity,
+                RentalQuantity = a.RentalQuantity,
                 Isoverdue = a.Isoverdue,
                 Status = a.Status.ToString()
 
@@ -126,7 +152,7 @@ namespace Movie_Rental_Management.Service
                 RentalDate = data.RentalDate.ToString("yyyy-MM-dd"),
                 ReturnDate = data.ReturnDate.ToString("yyyy-MM-dd"),
                 RentalDays = data.RentalDays,
-                RentalQuantity=data.RentalQuantity,
+                RentalQuantity = data.RentalQuantity,
                 TotalAmount = data.TotalAmount,
                 Isoverdue = data.Isoverdue,
                 Status = data.Status.ToString()
@@ -134,7 +160,7 @@ namespace Movie_Rental_Management.Service
             return response;
         }
 
-        public async Task<RentalResponseModel> UpdateRent(Guid Id ,RentalrequestModel rentalrequestModel)
+        public async Task<RentalResponseModel> UpdateRent(Guid Id, RentalrequestModel rentalrequestModel)
         {
             var rental = await _rentRepository.GetById(Id);
             if (rental == null) return null;
