@@ -89,7 +89,21 @@ namespace Movie_Rental_Management.Service
             return response;
         }
 
-
+       public async Task ApproedRental(Guid id)
+       {
+           var rental = await _rentRepository.GetById(id);
+           if (rental != null)
+           {
+               rental.Status = RentStatus.Approved;
+               rental.RentalDate = DateTime.UtcNow;
+               await _rentRepository.UpdateRent(rental);
+           }
+           // Update rental status to Approved (Enum value)
+           rental.RentalDate = DateTime.UtcNow;
+           rental.Status = RentStatus.Approved;  // Correctly assign the enum value
+           await _rentRepository.UpdateRent(rental);  // Call UpdateRental method to update the rental in the database
+       }
+       
         public async Task<List<RentalResponseModel>> GetAllRentals()
         {
             var data = await _rentRepository.GetAllRentals();
