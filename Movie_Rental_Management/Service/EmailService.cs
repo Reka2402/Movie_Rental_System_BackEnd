@@ -21,7 +21,7 @@ namespace Movie_Rental_Management.Service
 
         public async Task SendEmailAsync(string to, string subject, string body)
         {
-            var fromAddress = new MailAddress(_smtpUser, "PranavStark");
+            var fromAddress = new MailAddress(_smtpUser, "Reka");
             var toAddress = new MailAddress(to);
 
             using (var smtpClient = new SmtpClient(_smtpHost, _smtpPort))

@@ -26,6 +26,7 @@ namespace Movie_Rental_Management.Database
         public DbSet<ContactUs> ContactUs { get; set; }
         public DbSet<Favouirtes> Favourites { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<OTP> OTPs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

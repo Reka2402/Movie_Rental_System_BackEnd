@@ -7852,19 +7852,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UT01336\\.nuget\\packages\\": {}
+    "C:\\Users\\mrpsy\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\DEC\\12th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+      "projectUniqueName": "C:\\Users\\mrpsy\\OneDrive\\Desktop\\Reka\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
       "projectName": "Movie_Rental_Management",
-      "projectPath": "X:\\DEC\\12th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
-      "packagesPath": "C:\\Users\\UT01336\\.nuget\\packages\\",
-      "outputPath": "X:\\DEC\\12th\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\obj\\",
+      "projectPath": "C:\\Users\\mrpsy\\OneDrive\\Desktop\\Reka\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\Movie_Rental_Management.csproj",
+      "packagesPath": "C:\\Users\\mrpsy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mrpsy\\OneDrive\\Desktop\\Reka\\Movie_Rental_System_BackEnd\\Movie_Rental_Management\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\UT01336\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mrpsy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7872,7 +7877,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7889,8 +7893,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -7946,8 +7951,50 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "libraryId": "Azure.Identity",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
+      "libraryId": "Azure.Identity",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
+      "libraryId": "Microsoft.Identity.Client",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-x674-v45j-fwxw",
+      "libraryId": "Microsoft.Identity.Client",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

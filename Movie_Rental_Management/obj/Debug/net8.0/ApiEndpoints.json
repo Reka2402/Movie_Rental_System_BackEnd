@@ -16,6 +16,59 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Movie_Rental_Management.Controllers.FavouritesController",
+    "Method": "AddToFavourite",
+    "RelativePath": "api/Favourites/add/{userId}/{movieId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "movieId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.FavouritesController",
+    "Method": "DeleteFavourite",
+    "RelativePath": "api/Favourites/delete/{favouriteId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "favouriteId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.FavouritesController",
+    "Method": "GetFavouriteMovies",
+    "RelativePath": "api/Favourites/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Movie_Rental_Management.Controllers.MovieController",
     "Method": "AddDvd",
     "RelativePath": "api/Movie/AddDvd",
@@ -152,21 +205,11 @@
   {
     "ContainingType": "Movie_Rental_Management.Controllers.RentalController",
     "Method": "AddRental",
-    "RelativePath": "api/Rental/Add_Rendal",
+    "RelativePath": "api/Rental/Add_Rental",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "CustomerId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "MovieId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
       {
         "Name": "rentalrequestModel",
         "Type": "Movie_Rental_Management.Models.RequestModel.RentalrequestModel",
@@ -233,6 +276,80 @@
       {
         "Name": "rentalrequestModel",
         "Type": "Movie_Rental_Management.Models.RequestModel.RentalrequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.ReservationController",
+    "Method": "GetAllReservations",
+    "RelativePath": "api/Reservation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.ReservationController",
+    "Method": "GetReservationById",
+    "RelativePath": "api/Reservation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.ReservationController",
+    "Method": "DeleteReservation",
+    "RelativePath": "api/Reservation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.ReservationController",
+    "Method": "AddReservation",
+    "RelativePath": "api/Reservation/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservation",
+        "Type": "Movie_Rental_Management.Entities.Reservation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Movie_Rental_Management.Controllers.ReservationController",
+    "Method": "GetReservationsByUser",
+    "RelativePath": "api/Reservation/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
