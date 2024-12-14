@@ -26,7 +26,12 @@ namespace Movie_Rental_Management.Controllers
             var data = await _rentService.AddRental(rentalrequestModel);
             return Ok(data);
         }
-
+[HttpPut("approve/{id}")]
+public async Task<IActionResult> ApproveRental(Guid id)
+{
+    await _rentService.ApproedRental(id);
+    return Ok();
+}
         [HttpGet("Get_All_Rentals")]
         public async Task<IActionResult> GetAllRentals()
         {
